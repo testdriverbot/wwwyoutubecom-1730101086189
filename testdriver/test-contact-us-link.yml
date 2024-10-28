@@ -1,0 +1,23 @@
+version: 4.0.77
+steps:
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll-until-text
+        text: Copyright
+        direction: down
+  - prompt: Click on "Contact us".
+    commands:
+      - command: hover-text
+        text: Contact us
+        description: link in the footer
+        action: click
+  - prompt: >-
+      Assert that the contact page loads correctly.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the "Contact Us" heading is visible
