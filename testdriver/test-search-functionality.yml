@@ -1,0 +1,29 @@
+version: 4.0.77
+steps:
+  - prompt: Click on the search bar.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search bar in the header
+        action: click
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+  - prompt: Type "test video" and hit enter.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search bar in the header
+        action: click
+      - command: type
+        text: test video
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that search results are displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: search results are displayed
