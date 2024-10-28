@@ -1,0 +1,14 @@
+version: 4.0.77
+steps:
+  - prompt: Click on "Trending" in the sidebar.
+    commands:
+      - command: hover-text
+        text: Trending
+        description: link in the sidebar
+        action: click
+  - prompt: >-
+      Assert that the trending page is displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the trending page is displayed
