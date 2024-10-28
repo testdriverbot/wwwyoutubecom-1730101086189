@@ -1,0 +1,1 @@
+1. Assert that the YouTube logo is visible on the page.
